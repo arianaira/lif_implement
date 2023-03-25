@@ -1,0 +1,1669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<document>
+ <v key="core" type="string" >1.2507</v>
+ <v key="editor" type="string" >1.455</v>
+ <v key="electronics" type="string" >1.741</v>
+ <v key="flowcharts" type="string" >1.766</v>
+ <v key="motion" type="string" >1.677</v>
+ <v key="optics" type="string" >1.162</v>
+ <v key="physics_kits" type="string" >1.1</v>
+ <v key="presentation" type="string" >1.570</v>
+ <v key="title" type="string" >IPSP.cxp</v>
+ <v key="version" type="int" >1</v>
+ <v key="waves" type="string" >1.306</v>
+ <v key="wiki" type="string" >1.2</v>
+ <commands/>
+ <definitions/>
+ <model>
+  <p key="paused" type="bool" >true</p>
+  <p key="time" type="double" >
+   <display decimal-places="-1" unit="second" never-autorange="false" modify-value-on-unit-change="true" >
+    <v type="string-array" >
+     <v type="string" >microsecond</v>
+     <v type="string" >millisecond</v>
+     <v type="string" >second</v>
+     <v type="string" >minute</v>
+     <v type="string" >hour</v>
+    </v>
+   </display>
+   <v>1.316500000000e+02</v>
+  </p>
+  <p key="time-step" type="double" >
+   <validator label="double-validator" >
+    <v type="value-map" >
+     <v key="max" type="double" >1.000000000000e+00</v>
+     <v key="min" type="double" >1.000000000000e-30</v>
+    </v>
+   </validator>
+   <display decimal-places="-1" unit="millisecond" never-autorange="true" modify-value-on-unit-change="false" >
+    <v type="string-array" >
+     <v type="string" >microsecond</v>
+     <v type="string" >millisecond</v>
+     <v type="string" >second</v>
+     <v type="string" >minute</v>
+     <v type="string" >hour</v>
+    </v>
+   </display>
+   <v>5.000000000000e-02</v>
+  </p>
+  <p key="time-step-multiplier" type="double" >
+   <validator label="double-validator" >
+    <v type="value-map" >
+     <v key="max" type="double" >1.000000000000e+01</v>
+     <v key="min" type="double" >1.000000000000e-01</v>
+    </v>
+   </validator>
+   <v>1.000000000000e+00</v>
+  </p>
+  <p key="max-time-step" type="double" >
+   <validator label="double-validator" >
+    <v type="value-map" >
+     <v key="max" type="double" >1.000000000000e+00</v>
+     <v key="min" type="double" >1.000000000000e-05</v>
+    </v>
+   </validator>
+   <display decimal-places="-1" unit="millisecond" never-autorange="true" modify-value-on-unit-change="false" >
+    <v type="string-array" >
+     <v type="string" >microsecond</v>
+     <v type="string" >millisecond</v>
+     <v type="string" >second</v>
+     <v type="string" >minute</v>
+     <v type="string" >hour</v>
+    </v>
+   </display>
+   <v>5.000000000000e-02</v>
+  </p>
+  <p key="selected-scene" type="int" >0</p>
+  <scene class="core/default-scene" id="Scene 1" >
+   <p key="width" />
+   <p key="height" />
+   <p key="background-image" >
+    <validator label="resource-validator" >
+     <v type="value-array" >
+      <v type="value-map" >
+       <v key="label" type="string" >None</v>
+       <v key="rez" type="resource" />
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Appliances)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_for_appliances</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Inside)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_inside</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Outside)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_outside</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >Kit (horizontal)</v>
+       <v key="rez" type="resource" >product/backgrounds/kit_horizontal</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >Kit (vertical)</v>
+       <v key="rez" type="resource" >product/backgrounds/kit_vertical</v>
+      </v>
+     </v>
+    </validator>
+   </p>
+   <p key="zoom" >9.000000000000e-01</p>
+   <p key="scroll-offset" >(5.040650406504e-01,4.611650485437e-01)</p>
+   <p key="id" type="string" >
+    <validator label="string-validator" >
+     <v type="string" >^\S(.{0,28})(?=\S?$)</v>
+    </validator>
+   </p>
+   <part class="electronics/earth" id="GND1" >
+    <p key="pos" >(2.400000000000e+02,1.016000000000e+03)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="explosion-type" >6</p>
+    <p key="explosion-value" >1.000000000000e+30</p>
+    <p key="explosion-limit" >1.000000000000e+24</p>
+    <p key="current-formatter" >
+     <display decimal-places="-1" unit="megaampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <pad class="electronics/terminal" pid="4" role="t1,terminal" id="electronics_terminal2" >
+     <p key="pos" >(0.000000000000e+00,-2.400000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.383333333333e-09</p>
+     <p key="i-abs" >2.383333333333e-09</p>
+     <p key="start" >(0.000000000000e+00,-4.000000000000e+00)</p>
+    </pad>
+   </part>
+   <part class="presentation/graph" id="Graph1" >
+    <p key="pos" >(9.280000000000e+02,6.160000000000e+02)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="x-unit-provider" >
+     <display decimal-places="-1" unit="millisecond" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >microsecond</v>
+       <v type="string" >millisecond</v>
+       <v type="string" >second</v>
+       <v type="string" >minute</v>
+       <v type="string" >hour</v>
+      </v>
+     </display>
+    </p>
+    <p key="y-unit-provider" >
+     <display decimal-places="-1" unit="millivolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+    </p>
+    <p key="graph-mode" />
+    <p key="global-quantity" />
+    <p key="x-quantity" />
+    <p key="global-part" >../../../scene[@id='Scene 1']</p>
+    <p key="x-min" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >9.999000000000e+03</v>
+       <v key="min" type="double" >-1.797693134862e+308</v>
+      </v>
+     </validator>
+    </p>
+    <p key="x-max" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >1.797693134862e+308</v>
+       <v key="min" type="double" >1.000000000000e+00</v>
+      </v>
+     </validator>
+     <v>1.000000000000e+04</v>
+    </p>
+    <p key="y-min" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >-1.000000000000e+00</v>
+       <v key="min" type="double" >-1.797693134862e+308</v>
+      </v>
+     </validator>
+     <v>-1.500000000000e+02</v>
+    </p>
+    <p key="y-max" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >1.797693134862e+308</v>
+       <v key="min" type="double" >-1.490000000000e+02</v>
+      </v>
+     </validator>
+     <v>0.000000000000e+00</v>
+    </p>
+    <p key="inner-offset" />
+    <p key="inner-size" />
+    <p flags="mutable-proxy" key="local-time" >../../../scene[@id='Scene 1']/p[@key='time']</p>
+    <part class="presentation/grid" role="cosmetic,minor-grid" id="presentation_grid1" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#ccecff</p>
+     <p key="x-spacing" >4.000000000000e+02</p>
+     <p key="y-spacing" >1.000000000000e+01</p>
+    </part>
+    <part class="presentation/grid" role="cosmetic,major-grid" id="presentation_grid2" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#99ccff</p>
+     <p key="x-spacing" >2.000000000000e+03</p>
+     <p key="y-spacing" >5.000000000000e+01</p>
+    </part>
+    <part class="presentation/trace" role="probe0" id="presentation_trace1" >
+     <p key="enabled" >true</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#ff0000</p>
+     <p key="y-quantity" >user-voltage</p>
+     <p key="chosenNode" >../../../part[@id='Voltmeter1']</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" >../../../part[@id='Voltmeter1']/p[@key='user-voltage']</p>
+    </part>
+    <part class="presentation/trace" role="probe1" id="presentation_trace2" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#0000ff</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" />
+    </part>
+    <part class="presentation/trace" role="probe2" id="presentation_trace3" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#009b21</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" />
+    </part>
+    <part class="presentation/trace" role="probe3" id="presentation_trace4" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#a020f0</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" />
+    </part>
+    <part class="presentation/cliprect" role="cliprect" id="presentation_cliprect1" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+    </part>
+    <part class="presentation/axis" role="cosmetic,x-axis" id="presentation_axis1" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="major-tic-freq" />
+    </part>
+    <part class="presentation/axis" role="cosmetic,y-axis" id="presentation_axis2" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="major-tic-freq" />
+    </part>
+    <action class="presentation/action/graph/start" id="tmp54" />
+    <action class="presentation/action/graph/stop" id="tmp55" />
+    <action class="presentation/action/graph/restart" id="tmp56" />
+    <action class="presentation/action/graph/fit-to-x" id="tmp57" />
+    <action class="presentation/action/graph/fit-to-y" id="tmp58" />
+    <action class="presentation/action/graph/zoom-in" id="tmp59" />
+    <action class="presentation/action/graph/zoom-out" id="tmp60" />
+   </part>
+   <link end-pad="../part[@id='R1']/pad[@pid='18']" class="electronics/link" start-pad="../part[@id='PWR1']/pad[@pid='38']" id="LINK1" >
+    <p key="pos" >(3.280000000000e+02,8.160000000000e+02)</p>
+    <p key="path" >(0,0),(0,-16)</p>
+    <p key="path-length" >1.600000000000e+01</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >-2.333333333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <link end-pad="../junction[@id='JUNCTION1']/pad[@pid='39']" class="electronics/link" start-pad="../part[@id='PWR1']/pad[@pid='37']" id="LINK8" >
+    <p key="pos" >(3.280000000000e+02,8.800000000000e+02)</p>
+    <p key="path" >(0,0),(0,32),(120,32)</p>
+    <p key="path-length" >1.520000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >2.300833333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <link end-pad="../part[@id='C1']/pad[@pid='22']" class="electronics/link" start-pad="../junction[@id='JUNCTION1']/pad[@pid='39']" id="LINK7" >
+    <p key="pos" >(4.480000000000e+02,9.120000000000e+02)</p>
+    <p key="path" >(0,0),(144,0),(144,-96)</p>
+    <p key="path-length" >2.400000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >-2.646977960170e-23</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <link end-pad="../part[@id='C1']/pad[@pid='21']" class="electronics/link" start-pad="../part[@id='S1']/pad[@pid='14']" id="LINK6" >
+    <p key="pos" >(4.560000000000e+02,6.880000000000e+02)</p>
+    <p key="path" >(0,0),(136,0),(136,64)</p>
+    <p key="path-length" >2.000000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >2.646977960170e-23</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" >
+     <display decimal-places="-1" unit="millivolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+    </p>
+   </link>
+   <link end-pad="../junction[@id='JUNCTION1']/pad[@pid='39']" class="electronics/link" start-pad="../part[@id='GND2']/pad[@pid='10']" id="LINK2" >
+    <p key="pos" >(4.480000000000e+02,9.680000000000e+02)</p>
+    <p key="path" >(0,0),(0,-56)</p>
+    <p key="path-length" >5.600000000000e+01</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >-2.300833333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <link end-pad="../part[@id='R1']/pad[@pid='17']" class="electronics/link" start-pad="../part[@id='S1']/pad[@pid='14']" id="LINK3" >
+    <p key="pos" >(4.560000000000e+02,6.880000000000e+02)</p>
+    <p key="path" >(0,0),(-128,0),(-128,48)</p>
+    <p key="path-length" >1.760000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >2.333333333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" >
+     <display decimal-places="-1" unit="millivolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+    </p>
+   </link>
+   <part class="presentation/graph" id="Graph2" >
+    <p key="pos" >(9.200000000000e+02,7.920000000000e+02)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="x-unit-provider" >
+     <display decimal-places="-1" unit="millisecond" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >microsecond</v>
+       <v type="string" >millisecond</v>
+       <v type="string" >second</v>
+       <v type="string" >minute</v>
+       <v type="string" >hour</v>
+      </v>
+     </display>
+    </p>
+    <p key="y-unit-provider" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="graph-mode" />
+    <p key="global-quantity" />
+    <p key="x-quantity" />
+    <p key="global-part" >../../../scene[@id='Scene 1']</p>
+    <p key="x-min" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >3.375000000014e+04</v>
+       <v key="min" type="double" >-1.797693134862e+308</v>
+      </v>
+     </validator>
+    </p>
+    <p key="x-max" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >1.797693134862e+308</v>
+       <v key="min" type="double" >1.000000000000e+00</v>
+      </v>
+     </validator>
+     <v>3.375100000014e+04</v>
+    </p>
+    <p key="y-min" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >1.299900000000e+04</v>
+       <v key="min" type="double" >-1.797693134862e+308</v>
+      </v>
+     </validator>
+     <v>-1.200000000000e+04</v>
+    </p>
+    <p key="y-max" >
+     <validator label="double-validator" >
+      <v type="value-map" >
+       <v key="max" type="double" >1.797693134862e+308</v>
+       <v key="min" type="double" >-1.199900000000e+04</v>
+      </v>
+     </validator>
+     <v>1.300000000000e+04</v>
+    </p>
+    <p key="inner-offset" />
+    <p key="inner-size" />
+    <p flags="mutable-proxy" key="local-time" >../../../scene[@id='Scene 1']/p[@key='time']</p>
+    <p key="max-datapoints" />
+    <part class="presentation/grid" role="cosmetic,minor-grid" id="presentation_grid3" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#ccecff</p>
+     <p key="x-spacing" >1.000000000000e+03</p>
+     <p key="y-spacing" >1.000000000000e+03</p>
+     <p key="x-enabled" />
+     <p key="y-enabled" />
+    </part>
+    <part class="presentation/grid" role="cosmetic,major-grid" id="presentation_grid4" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#99ccff</p>
+     <p key="x-spacing" >5.000000000000e+03</p>
+     <p key="y-spacing" >5.000000000000e+03</p>
+     <p key="x-enabled" />
+     <p key="y-enabled" />
+    </part>
+    <part class="presentation/trace" role="probe0" id="presentation_trace5" >
+     <p key="enabled" >true</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#0000ff</p>
+     <p key="y-quantity" >user-current</p>
+     <p key="chosenNode" >../../../link[@id='LINK6']</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" >../../../link[@id='LINK6']/p[@key='user-current']</p>
+     <p key="line-style" />
+     <p key="line-weight" />
+     <p key="point-size" />
+    </part>
+    <part class="presentation/trace" role="probe1" id="presentation_trace6" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#0000ff</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" />
+    </part>
+    <part class="presentation/trace" role="probe2" id="presentation_trace7" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#009b21</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" />
+    </part>
+    <part class="presentation/trace" role="probe3" id="presentation_trace8" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" >#a020f0</p>
+     <p flags="mutable-proxy" key="x-proxy" >../../../../scene[@id='Scene 1']/p[@key='time']</p>
+     <p flags="mutable-proxy" key="y-proxy" />
+    </part>
+    <part class="presentation/cliprect" role="cliprect" id="presentation_cliprect2" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+    </part>
+    <part class="presentation/axis" role="cosmetic,x-axis" id="presentation_axis3" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" />
+     <p key="major-tic-freq" />
+    </part>
+    <part class="presentation/axis" role="cosmetic,y-axis" id="presentation_axis4" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="stroke" />
+     <p key="major-tic-freq" />
+    </part>
+    <action class="presentation/action/graph/start" id="tmp78" />
+    <action class="presentation/action/graph/stop" id="tmp79" />
+    <action class="presentation/action/graph/restart" id="tmp80" />
+    <action class="presentation/action/graph/fit-to-x" id="tmp81" />
+    <action class="presentation/action/graph/fit-to-y" id="tmp82" />
+    <action class="presentation/action/graph/zoom-in" id="tmp83" />
+    <action class="presentation/action/graph/zoom-out" id="tmp84" />
+   </part>
+   <part class="electronics/battery" id="PWR1" >
+    <p key="pos" >(3.280000000000e+02,8.480000000000e+02)</p>
+    <p key="orientation" >-3.141592653590e+00</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="export-library" >Power supplies</p>
+    <p key="export-name" >Battery</p>
+    <p key="tooltip-current" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-current" />
+    <p key="two-terminal-path-dependent-current" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-power" />
+    <p key="voltage" >
+     <display decimal-places="-1" unit="millivolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+     <v>6.500000000000e-02</v>
+    </p>
+    <pad class="electronics/terminal" pid="37" role="positive,terminal" id="electronics_terminal5" >
+     <p key="pos" >(0.000000000000e+00,-3.200000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="pad-length" >2.600000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.300833333333e-09</p>
+     <p key="i-abs" >2.300833333333e-09</p>
+     <p key="start" >(0.000000000000e+00,-6.000000000000e+00)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="38" role="negative,terminal" id="electronics_terminal13" >
+     <p key="pos" >(0.000000000000e+00,3.200000000000e+01)</p>
+     <p key="orientation" >1.570796326795e+00</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-6.500000000000e-02</p>
+     <p key="start" >(0.000000000000e+00,1.200000000000e+01)</p>
+    </pad>
+   </part>
+   <part class="electronics/earth" id="GND2" >
+    <p key="pos" >(4.480000000000e+02,9.920000000000e+02)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <pad class="electronics/terminal" pid="10" role="t1,terminal" id="electronics_terminal6" >
+     <p key="pos" >(0.000000000000e+00,-2.400000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.300833333333e-09</p>
+     <p key="i-abs" >2.300833333333e-09</p>
+     <p key="start" >(0.000000000000e+00,-4.000000000000e+00)</p>
+    </pad>
+   </part>
+   <part class="electronics/spst" id="S1" >
+    <p key="pos" >(4.560000000000e+02,6.560000000000e+02)</p>
+    <p key="orientation" >1.570796326795e+00</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="export-library" >Switches</p>
+    <p key="export-name" >SPST Switch (Leads)</p>
+    <p key="explosion-type" >4</p>
+    <p key="explosion-value" >3.271986003774e+04</p>
+    <p key="explosion-limit" >4.000000000000e+02</p>
+    <p key="tooltip-current" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-path-dependent-current" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-voltage" />
+    <p key="two-terminal-power" />
+    <p key="state" >true</p>
+    <p key="current-formatter" >
+     <display decimal-places="-1" unit="ampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <control class="electronics/control/toggle-switch" role="switch" id="ToggleSwitch1" >
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="pos-magnitude" >1.300000000000e+01</p>
+    </control>
+    <pad class="electronics/terminal" pid="13" role="t1,terminal" id="electronics_terminal7" >
+     <p key="pos" >(-3.200000000000e+01,0.000000000000e+00)</p>
+     <p key="orientation" >3.141592653590e+00</p>
+     <p key="pad-length" >2.200000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-8.833333333333e-02</p>
+     <p key="start" >(-1.000000000000e+01,0.000000000000e+00)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="14" role="t2,terminal" id="electronics_terminal3" >
+     <p key="pos" >(3.200000000000e+01,0.000000000000e+00)</p>
+     <p key="pad-length" >2.100000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-8.833333333333e-02</p>
+     <p key="start" >(1.100000000000e+01,0.000000000000e+00)</p>
+    </pad>
+   </part>
+   <part class="electronics/resistor" id="R1" >
+    <p key="pos" >(3.280000000000e+02,7.680000000000e+02)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="export-library" >Passive components</p>
+    <p key="export-name" >Resistor</p>
+    <p key="explosion-type" >5</p>
+    <p key="explosion-value" >1.756140285696e+05</p>
+    <p key="explosion-limit" >1.200000000000e+03</p>
+    <p key="two-terminal-path-dependent-current" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-voltage" />
+    <p key="two-terminal-power" />
+    <p key="resistance" >
+     <display decimal-places="-1" unit="megaohm" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoohm</v>
+       <v type="string" >nanoohm</v>
+       <v type="string" >microohm</v>
+       <v type="string" >milliohm</v>
+       <v type="string" >ohm</v>
+       <v type="string" >kiloohm</v>
+       <v type="string" >megaohm</v>
+      </v>
+     </display>
+     <v>1.000000000000e+07</v>
+    </p>
+    <p key="voltage-formatter" >
+     <display decimal-places="-1" unit="kilovolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+    </p>
+    <pad class="electronics/terminal" pid="17" role="t1,terminal" id="electronics_terminal8" >
+     <p key="pos" >(0.000000000000e+00,-3.200000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="pad-length" >2.200000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-8.833333333333e-02</p>
+     <p key="start" >(0.000000000000e+00,-1.000000000000e+01)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="18" role="t2,terminal" id="electronics_terminal9" >
+     <p key="pos" >(0.000000000000e+00,3.200000000000e+01)</p>
+     <p key="orientation" >1.570796326795e+00</p>
+     <p key="pad-length" >2.200000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-6.500000000000e-02</p>
+     <p key="start" >(0.000000000000e+00,1.000000000000e+01)</p>
+    </pad>
+   </part>
+   <part class="electronics/resistor" id="R2" >
+    <p key="pos" >(3.280000000000e+02,6.160000000000e+02)</p>
+    <p key="orientation" >1.570796326795e+00</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="export-library" >Passive components</p>
+    <p key="export-name" >Resistor</p>
+    <p key="explosion-type" >5</p>
+    <p key="explosion-value" >1.756140285696e+05</p>
+    <p key="explosion-limit" >1.200000000000e+03</p>
+    <p key="two-terminal-path-dependent-current" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-voltage" />
+    <p key="two-terminal-power" />
+    <p key="resistance" >
+     <display decimal-places="-1" unit="megaohm" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoohm</v>
+       <v type="string" >nanoohm</v>
+       <v type="string" >microohm</v>
+       <v type="string" >milliohm</v>
+       <v type="string" >ohm</v>
+       <v type="string" >kiloohm</v>
+       <v type="string" >megaohm</v>
+      </v>
+     </display>
+     <v>5.000000000000e+06</v>
+    </p>
+    <p key="voltage-formatter" >
+     <display decimal-places="-1" unit="kilovolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+    </p>
+    <pad class="electronics/terminal" pid="46" role="t1,terminal" id="electronics_terminal15" >
+     <p key="pos" >(0.000000000000e+00,-3.200000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="pad-length" >2.200000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-8.833333333333e-02</p>
+     <p key="start" >(0.000000000000e+00,-1.000000000000e+01)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="47" role="t2,terminal" id="electronics_terminal14" >
+     <p key="pos" >(0.000000000000e+00,3.200000000000e+01)</p>
+     <p key="orientation" >1.570796326795e+00</p>
+     <p key="pad-length" >2.200000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-1.000000000000e-01</p>
+     <p key="start" >(0.000000000000e+00,1.000000000000e+01)</p>
+    </pad>
+   </part>
+   <junction class="electronics/junction" id="JUNCTION1" >
+    <p key="pos" >(4.480000000000e+02,9.120000000000e+02)</p>
+    <p key="selectable" >false</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <pad class="electronics/terminal" pid="39" role="pad" id="electronics_terminal12" >
+     <p key="link-orientation-range" >-3.141592653590e+00,3.141592653590e+00</p>
+     <p key="max-num-links" >4</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+    </pad>
+   </junction>
+   <part class="electronics/capacitor" id="C1" >
+    <p key="pos" >(5.920000000000e+02,7.840000000000e+02)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="export-library" >Passive components</p>
+    <p key="export-name" >Capacitor (polyester)</p>
+    <p key="explosion-type" >4</p>
+    <p key="explosion-value" >4.041913460783e+02</p>
+    <p key="explosion-limit" >1.000000000000e+02</p>
+    <p key="tooltip-current" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-path-dependent-current" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-voltage" />
+    <p key="two-terminal-power" />
+    <p key="capacitance" >
+     <display decimal-places="-1" unit="nanofarad" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picofarad</v>
+       <v type="string" >nanofarad</v>
+       <v type="string" >microfarad</v>
+       <v type="string" >millifarad</v>
+       <v type="string" >farad</v>
+       <v type="string" >kilofarad</v>
+       <v type="string" >megafarad</v>
+      </v>
+     </display>
+    </p>
+    <p key="charge" >
+     <display decimal-places="-1" unit="microcoulomb" never-autorange="false" modify-value-on-unit-change="false" >
+      <v type="string-array" >
+       <v type="string" >picocoulomb</v>
+       <v type="string" >nanocoulomb</v>
+       <v type="string" >microcoulomb</v>
+       <v type="string" >millicoulomb</v>
+       <v type="string" >coulomb</v>
+       <v type="string" >kilocoulomb</v>
+       <v type="string" >megacoulomb</v>
+      </v>
+     </display>
+     <v>-8.833333333333e-09</v>
+    </p>
+    <pad class="electronics/terminal" pid="21" role="t1,terminal" id="electronics_terminal10" >
+     <p key="pos" >(0.000000000000e+00,-3.200000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="pad-length" >3.000000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.646977960170e-23</p>
+     <p key="i-abs" >2.646977960170e-23</p>
+     <p key="v" >-8.833333333333e-02</p>
+     <p key="start" >(0.000000000000e+00,-2.000000000000e+00)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="22" role="t2,terminal" id="electronics_terminal11" >
+     <p key="pos" >(0.000000000000e+00,3.200000000000e+01)</p>
+     <p key="orientation" >1.570796326795e+00</p>
+     <p key="pad-length" >2.800000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.646977960170e-23</p>
+     <p key="i-abs" >2.646977960170e-23</p>
+     <p key="start" >(0.000000000000e+00,4.000000000000e+00)</p>
+    </pad>
+   </part>
+   <part class="electronics/voltmeter" id="Voltmeter1" >
+    <p key="pos" >(6.720000000000e+02,7.840000000000e+02)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="two-terminal-path-dependent-current" />
+    <p key="two-terminal-voltage" />
+    <p key="two-terminal-power" />
+    <pad class="electronics/terminal" pid="42" role="t1,terminal" id="electronics_terminal1" >
+     <p key="pos" >(0.000000000000e+00,-3.200000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="pad-length" >2.200000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="v" >-8.833333333333e-02</p>
+     <p key="start" >(0.000000000000e+00,-1.000000000000e+01)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="43" role="t2,terminal" id="electronics_terminal4" >
+     <p key="pos" >(0.000000000000e+00,3.200000000000e+01)</p>
+     <p key="orientation" >1.570796326795e+00</p>
+     <p key="pad-length" >2.100000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="start" >(0.000000000000e+00,1.100000000000e+01)</p>
+    </pad>
+   </part>
+   <link end-pad="../part[@id='Voltmeter1']/pad[@pid='42']" class="electronics/link" start-pad="../part[@id='C1']/pad[@pid='21']" id="LINK5" >
+    <p key="pos" >(5.920000000000e+02,7.520000000000e+02)</p>
+    <p key="path" >(0,0),(80,5.68434e-14)</p>
+    <p key="path-length" >8.000000000000e+01</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" >
+     <display decimal-places="-1" unit="millivolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+    </p>
+   </link>
+   <link end-pad="../part[@id='S1']/pad[@pid='13']" class="electronics/link" start-pad="../part[@id='R2']/pad[@pid='46']" id="LINK9" >
+    <p key="pos" >(3.600000000000e+02,6.160000000000e+02)</p>
+    <p key="path" >(0,0),(96,0),(96,8)</p>
+    <p key="path-length" >1.040000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >2.333333333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <link end-pad="../part[@id='Voltmeter1']/pad[@pid='43']" class="electronics/link" start-pad="../part[@id='C1']/pad[@pid='22']" id="LINK4" >
+    <p key="pos" >(5.920000000000e+02,8.160000000000e+02)</p>
+    <p key="path" >(0,0),(80,0)</p>
+    <p key="path-length" >8.000000000000e+01</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="picoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <part class="electronics/battery" id="PWR2" >
+    <p key="pos" >(2.400000000000e+02,7.760000000000e+02)</p>
+    <p key="orientation" >-3.141592653590e+00</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="export-library" >Power supplies</p>
+    <p key="export-name" >Battery</p>
+    <p key="two-terminal-current" />
+    <p key="two-terminal-path-dependent-current" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="two-terminal-power" />
+    <p key="voltage" >
+     <display decimal-places="-1" unit="millivolts" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picovolts</v>
+       <v type="string" >nanovolts</v>
+       <v type="string" >microvolts</v>
+       <v type="string" >millivolts</v>
+       <v type="string" >volts</v>
+       <v type="string" >kilovolts</v>
+       <v type="string" >megavolts</v>
+      </v>
+     </display>
+     <v>1.000000000000e-01</v>
+    </p>
+    <pad class="electronics/terminal" pid="44" role="positive,terminal" id="electronics_terminal16" >
+     <p key="pos" >(0.000000000000e+00,-3.200000000000e+01)</p>
+     <p key="orientation" >-1.570796326795e+00</p>
+     <p key="pad-length" >2.600000000000e+01</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >-2.383333333333e-09</p>
+     <p key="i-abs" >2.383333333333e-09</p>
+     <p key="start" >(0.000000000000e+00,-6.000000000000e+00)</p>
+    </pad>
+    <pad class="electronics/terminal" pid="45" role="negative,terminal" id="electronics_terminal17" >
+     <p key="pos" >(0.000000000000e+00,3.200000000000e+01)</p>
+     <p key="orientation" >1.570796326795e+00</p>
+     <p key="id" type="string" >
+      <validator label="string-validator" >
+       <v type="string" >[a-zA-Z0-9_\- /]+</v>
+      </validator>
+     </p>
+     <p key="i" >2.333333333333e-09</p>
+     <p key="i-abs" >2.333333333333e-09</p>
+     <p key="v" >-1.000000000000e-01</p>
+     <p key="start" >(0.000000000000e+00,1.200000000000e+01)</p>
+    </pad>
+   </part>
+   <link end-pad="../part[@id='R2']/pad[@pid='47']" class="electronics/link" start-pad="../part[@id='PWR2']/pad[@pid='45']" id="LINK10" >
+    <p key="pos" >(2.400000000000e+02,7.440000000000e+02)</p>
+    <p key="path" >(0,0),(0,-128),(56,-128)</p>
+    <p key="path-length" >1.840000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >2.333333333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <link end-pad="../part[@id='GND1']/pad[@pid='4']" class="electronics/link" start-pad="../part[@id='PWR2']/pad[@pid='44']" id="LINK11" >
+    <p key="pos" >(2.400000000000e+02,8.080000000000e+02)</p>
+    <p key="path" >(0,0),(0,184)</p>
+    <p key="path-length" >1.840000000000e+02</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p key="i" >-2.383333333333e-09</p>
+    <p key="i-abs" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="i-path-dependent" >
+     <display decimal-places="-1" unit="nanoampere" never-autorange="false" modify-value-on-unit-change="true" >
+      <v type="string-array" >
+       <v type="string" >picoampere</v>
+       <v type="string" >nanoampere</v>
+       <v type="string" >microampere</v>
+       <v type="string" >milliampere</v>
+       <v type="string" >ampere</v>
+       <v type="string" >kiloampere</v>
+       <v type="string" >megaampere</v>
+      </v>
+     </display>
+    </p>
+    <p key="v" />
+   </link>
+   <part class="presentation/instructions" id="Instruction1" >
+    <p key="pos" >(8.240000000000e+02,1.000000000000e+03)</p>
+    <p key="id" type="string" >
+     <validator label="string-validator" >
+      <v type="string" >[a-zA-Z0-9_\- /]+</v>
+     </validator>
+    </p>
+    <p flags="user-hidden,readonly" key="bold" />
+    <p flags="user-hidden,readonly" key="italic" />
+    <p flags="readonly" key="underline" />
+    <p flags="user-hidden,readonly" key="show-character-map" />
+    <p key="text" ><![CDATA[<html><head><meta name="qrichtext" content="1" /></head><body>
+<p>τ * dv/dt = -v + R * I(t)</p>
+</body></html>
+]]></p>
+    <p key="unformatted-text" >τ * dv/dt = -v + R * I(t)</p>
+    <p key="current-page" >
+     <validator label="int-validator" >
+      <v type="value-map" >
+       <v key="max" type="int" >1</v>
+       <v key="min" type="int" >1</v>
+      </v>
+     </validator>
+    </p>
+    <p key="page-content" >
+     <v type="string" ><![CDATA[<html><head><meta name="qrichtext" content="1" /></head><body>
+<p>τ * dv/dt = -v + R * I(t)</p>
+</body></html>
+]]></v>
+    </p>
+    <action class="presentation/action/text/toggle-readonly" id="tmp161" >
+     <p key="group" >Instruction Actions</p>
+     <p key="name" >Disable editing</p>
+    </action>
+    <action class="presentation/action/instructions/insert-page" id="tmp162" />
+    <action class="presentation/action/instructions/remove-current-page" id="tmp163" >
+     <p key="enabled" >false</p>
+    </action>
+    <action class="presentation/action/instructions/next-page" id="tmp164" >
+     <p key="enabled" >false</p>
+    </action>
+    <action class="presentation/action/instructions/previous-page" id="tmp165" >
+     <p key="enabled" >false</p>
+    </action>
+    <action class="presentation/action/instructions/refresh-content" id="tmp166" >
+     <p key="user-hidden" >true</p>
+    </action>
+   </part>
+   <p class="electronics/*" key="meta-controlpane" >
+    <v type="string" >electronics/ui/scene-visual</v>
+    <v type="string" >electronics/ui/scene-simulation</v>
+    <v type="string" >electronics/ui/scene-meters</v>
+    <v type="string" >electronics/ui/scene-logic</v>
+    <v type="string" >electronics/ui/scene-partids</v>
+   </p>
+  </scene>
+  <scene class="core/default-scene" id="Scene 2" >
+   <p key="width" />
+   <p key="height" />
+   <p key="background-image" >
+    <validator label="resource-validator" >
+     <v type="value-array" >
+      <v type="value-map" >
+       <v key="label" type="string" >None</v>
+       <v key="rez" type="resource" />
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Appliances)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_for_appliances</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Inside)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_inside</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Outside)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_outside</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >Kit (horizontal)</v>
+       <v key="rez" type="resource" >product/backgrounds/kit_horizontal</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >Kit (vertical)</v>
+       <v key="rez" type="resource" >product/backgrounds/kit_vertical</v>
+      </v>
+     </v>
+    </validator>
+   </p>
+   <p key="id" type="string" >
+    <validator label="string-validator" >
+     <v type="string" >^\S(.{0,28})(?=\S?$)</v>
+    </validator>
+   </p>
+   <p class="electronics/*" key="meta-controlpane" >
+    <v type="string" >electronics/ui/scene-visual</v>
+    <v type="string" >electronics/ui/scene-simulation</v>
+    <v type="string" >electronics/ui/scene-meters</v>
+    <v type="string" >electronics/ui/scene-logic</v>
+    <v type="string" >electronics/ui/scene-partids</v>
+   </p>
+  </scene>
+  <scene class="core/default-scene" id="Scene 3" >
+   <p key="width" />
+   <p key="height" />
+   <p key="background-image" >
+    <validator label="resource-validator" >
+     <v type="value-array" >
+      <v type="value-map" >
+       <v key="label" type="string" >None</v>
+       <v key="rez" type="resource" />
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Appliances)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_for_appliances</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Inside)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_inside</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >House (Outside)</v>
+       <v key="rez" type="resource" >product/backgrounds/house_outside</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >Kit (horizontal)</v>
+       <v key="rez" type="resource" >product/backgrounds/kit_horizontal</v>
+      </v>
+      <v type="value-map" >
+       <v key="label" type="string" >Kit (vertical)</v>
+       <v key="rez" type="resource" >product/backgrounds/kit_vertical</v>
+      </v>
+     </v>
+    </validator>
+   </p>
+   <p key="id" type="string" >
+    <validator label="string-validator" >
+     <v type="string" >^\S(.{0,28})(?=\S?$)</v>
+    </validator>
+   </p>
+   <p class="electronics/*" key="meta-controlpane" >
+    <v type="string" >electronics/ui/scene-visual</v>
+    <v type="string" >electronics/ui/scene-simulation</v>
+    <v type="string" >electronics/ui/scene-meters</v>
+    <v type="string" >electronics/ui/scene-logic</v>
+    <v type="string" >electronics/ui/scene-partids</v>
+   </p>
+  </scene>
+ </model>
+</document>
